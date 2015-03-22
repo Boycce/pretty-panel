@@ -7,6 +7,8 @@
   <title><?php __(site()->title()) ?> | Panel</title>
 
   <?php echo assets::css() ?>
+  <link rel="stylesheet" href="<?php echo url('panel/assets/css/custompanel.css')?>">
+  <link rel="icon" href='<?php echo url('panel/assets/images/favicon.ico')?>' sizes="32x32">
     
   <style><?php echo form::css() ?></style>
 

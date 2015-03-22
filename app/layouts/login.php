@@ -7,6 +7,8 @@
     <title><?php __(site()->title() . ' | Panel | ' . l('login')) ?></title>
 
     <?php echo assets::css() ?>
+    <link rel="stylesheet" href="<?php echo url('panel/assets/css/custompanel.css')?>">
+    <link rel="icon" href='<?php echo url('panel/assets/images/favicon.ico')?>' sizes="32x32">
 
   </head>
   <body class="grey">
