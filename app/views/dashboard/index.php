@@ -8,7 +8,7 @@
 
       <h2 class="hgroup hgroup-single-line hgroup-compressed cf">
         <span class="hgroup-title">
-          <a href="#/subpages/index/"><?php _l('dashboard.index.pages.title') ?></a>
+          <?php _l('dashboard.index.pages.title') ?>
         </span>
         <span class="hgroup-options shiv shiv-dark shiv-left">
           <span class="hgroup-option-right">
@@ -30,66 +30,6 @@
 
     </div>
 
-    <div class="section white dashboard-section">
-
-      <h2 class="hgroup hgroup-single-line cf">
-        <span class="hgroup-title">
-          <a target="_blank" href="<?php echo url() ?>"><?php _l('dashboard.index.site.title') ?></a>
-        </span>
-      </h2>
-
-      <div class="field field-is-readonly">
-        <div class="field-content">
-          <div class="input input-is-readonly">
-            <a target="_blank" href="<?php echo url() ?>"><?php echo url::short(url()) ?></a>
-          </div>
-          <div class="field-icon">
-            <i class="icon fa fa-chain"></i>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="section white dashboard-section">
-
-      <h2 class="hgroup hgroup-single-line cf">
-        <span class="hgroup-title">
-          <a href="<?php _u($user, 'edit') ?>"><?php _l('dashboard.index.account.title') ?></a>
-        </span>
-        <span class="hgroup-options shiv shiv-dark shiv-left">
-          <span class="hgroup-option-right">
-            <a href="<?php _u($user, 'edit') ?>">
-              <?php i('pencil', 'left') ?><span><?php _l('dashboard.index.account.edit') ?></span>
-            </a>
-          </span>
-        </span>
-      </h2>
-
-      <div class="field">
-        <div class="input input-with-items">
-          <div class="item item-condensed item-with-image">
-            <div class="item-content grey">
-              <figure class="item-image">
-                <a class="item-image-container" href="<?php _u($user, 'edit') ?>">
-                  <?php if($user->avatar()): ?>
-                  <img src="<?php echo $user->avatar()->url() ?>" alt="<?php __($user->username()) ?>">
-                  <?php else: ?>
-                  <img src="<?php echo panel()->urls()->images() . '/avatar.png' ?>" alt="<?php __($user->username()) ?>">
-                  <?php endif ?>
-                </a>
-              </figure>
-              <div class="item-info">
-                <a class="item-title" href="<?php _u($user, 'edit') ?>">
-                  <?php __($user->username()) ?>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
 
     <?php foreach($widgets as $widget): ?>
     <div class="section white dashboard-section">
@@ -105,18 +45,12 @@
     </div>
     <?php endforeach ?>
 
+
     <div class="section white dashboard-section">
 
       <h2 class="hgroup hgroup-single-line cf">
         <span class="hgroup-title">
-          <a href="#/metatags/"><?php _l('dashboard.index.metatags.title') ?></a>
-        </span>
-        <span class="hgroup-options shiv shiv-dark shiv-left">
-          <span class="hgroup-option-right">
-            <a href="#/metatags/">
-              <?php i('pencil', 'left') ?><span><?php _l('dashboard.index.metatags.edit') ?></span>
-            </a>
-          </span>
+          <?php _l('dashboard.index.metatags.title') ?>
         </span>
       </h2>
 
@@ -131,6 +65,7 @@
       </div>
     </div>
 
+    <?php if (c::get('showHistory')): ?>
     <div class="section white dashboard-section">
 
       <h2 class="hgroup hgroup-single-line cf">
@@ -159,6 +94,7 @@
 
       </div>
     </div>
+    <?php endif ?>
 
   </div>
 

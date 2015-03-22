@@ -10,14 +10,14 @@
     <?php foreach($page->parents()->flip() as $item): ?>
     <li>
       <a title="<?php __($item->title()) ?>" class="breadcrumb-link" href="<?php echo purl($item, 'show') ?>">
-        <span class="breadcrumb-label"><?php __($item->title()) ?></span>
+        <span class="breadcrumb-label"><?php __($item->uid()) ?></span>
       </a>
     </li>
     <?php endforeach ?>
     <?php if(!$page->isSite()): ?>
     <li>
       <a title="<?php __($page->title()) ?>" class="breadcrumb-link" href="<?php echo purl($page, 'show') ?>">
-        <span class="breadcrumb-label"><?php __($page->title()) ?></span>
+        <span class="breadcrumb-label"><?php __($page->uid()) ?></span>
       </a>
     </li>
     <?php endif ?>

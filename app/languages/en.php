@@ -15,6 +15,11 @@ return array(
     'insert' => 'Insert',
     'ok' => 'Ok',
 
+    // Custom
+    'site' => 'Site',
+    'dashboard.index.widgets.title' => 'Widgets',
+    'dashboard.index.widgets.text' => 'Your custom widgets will appear hear for you to modify.',
+
     // options (sidebar)
     'options.show' => 'Show options',
     'options.hide' => 'Hide options',
@@ -52,7 +57,7 @@ return array(
     // dashboard
     'dashboard' => 'Dashboard',
     'dashboard.index.pages.title' => 'Pages',
-    'dashboard.index.pages.edit' => 'Edit',
+    'dashboard.index.pages.edit' => 'Order',
     'dashboard.index.pages.add' => 'Add',
     'dashboard.index.site.title' => 'Your site\'s URL',
     'dashboard.index.account.title' => 'Your account',

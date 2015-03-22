@@ -5,6 +5,11 @@
 <nav id="menu" class="dropdown dropdown-left">
   <ul class="nav nav-list dropdown-list">
     <li>
+      <a href="<?php echo url() ?>">
+        <?php i('chain', 'left') . _l('site')  ?>
+      </a>
+    </li>
+    <li>
       <a href="<?php _u() ?>">
         <?php i('file-o', 'left') . _l('dashboard') ?>
       </a>
