@@ -30,8 +30,8 @@
 
 /* ---- Sidebar ------------------------------ */
 
-.sidebar-list > li.error {
-  display:none;
+.sidebar-list {
+
 }
 
 
@@ -179,6 +179,17 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 hr {
   background: #E0E2E8;
+}
+
+
+/* Structure */
+.structureskinny-empty,
+.structure-empty {
+  padding: 1.5em;
+  background: #E1E2E8 !important;
+}
+a.label-option {
+  cursor:pointer;
 }
 
 @media screen and (min-width: 60em) {
