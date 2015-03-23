@@ -52,7 +52,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   border: 2px solid #D8DAE7;
   color: #616686;
 }
-
+.modal-content textarea {
+  max-height: 230px;
+  overflow: auto !important;
+}
+.modal-content .text {
+  margin-bottom:-1.0em
+}
 .input:focus {
   border-color: #38B230;
 }
@@ -179,6 +185,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 hr {
   background: #E0E2E8;
+}
+
+
+textarea.nowrap {
+  white-space: nowrap;
+  overflow-x: auto! important;
 }
 
 
