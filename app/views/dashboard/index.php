@@ -23,7 +23,11 @@
       </h2>
 
       <ul class="nav nav-list sidebar-list">
-        <?php foreach($site->children() as $c): ?>
+        <?php foreach($site->children()->visible()->sortBy('title', 'asc') as $c): ?>
+        <?php echo new Snippet('pages/sidebar/subpage', array('subpage' => $c)) ?>
+        <?php endforeach ?>
+
+        <?php foreach($site->children()->invisible()->sortBy('title', 'asc') as $c): ?>
         <?php echo new Snippet('pages/sidebar/subpage', array('subpage' => $c)) ?>
         <?php endforeach ?>
       </ul>
