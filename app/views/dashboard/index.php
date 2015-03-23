@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <?php if (c::get('showHistory')): ?>
+    <?php if (!c::get('hideHistory')): ?>
     <div class="section white dashboard-section">
 
       <h2 class="hgroup hgroup-single-line cf">

@@ -4,13 +4,35 @@
 
   <div class="sidebar-content section">
 
+    <?php 
+    $widgetPage = false;
+    foreach (c::get('widgetPages') as $item) {
+
+      // Check if page slug & parent pages are widget page.
+      if ($page->slug() == $item) 
+        $widgetPage = true;
+
+      foreach ($page->parents()->flip() as $parent) 
+        if ($parent->slug() == $item) 
+          $widgetPage = true;
+    } 
+    ?>
+
     <h2 class="hgroup hgroup-single-line hgroup-compressed cf">
       <span class="hgroup-title">
-        <?php _l('pages.show.settings') ?>
+        <?php echo (($widgetPage)? $page->title() : l('pages.show.settings')) ?>
       </span>
     </h2>
 
     <ul class="nav nav-list sidebar-list">
+
+      <?php if ($widgetPage): ?>
+      <li>
+        <a title="b" data-shortcut="b" href="#/">
+          <?php i('arrow-circle-left', 'left') . _l('metatags.back') ?>
+        </a>
+      </li>
+      <?php endif; ?>
 
       <?php if($preview): ?>
       <li>
@@ -20,7 +42,7 @@
       </li>
       <?php endif ?>
 
-      <?php if(!$page->isHomePage() and !$page->isErrorPage()): ?>
+      <?php if(!$page->isHomePage() and !$page->isErrorPage() and !$widgetPage): ?>
       <li>
         <a title="u" data-shortcut="u" href="<?php echo purl($page, 'url') ?>">
           <?php i('chain', 'left') . _l('pages.show.changeurl') ?>
