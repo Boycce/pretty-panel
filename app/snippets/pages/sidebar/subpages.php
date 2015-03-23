@@ -4,9 +4,12 @@
   </span>
   <span class="hgroup-options shiv shiv-dark shiv-left">
     <span class="hgroup-option-right">
+    
+      <?php if (c::get('pageOrdering') || is_null(c::get('pageOrdering'))): ?>
       <a title="<?php _l('pages.show.subpages.edit') ?>" href="<?php _u('subpages/index/' . $page->id()) ?>">
         <?php i('pencil', 'left') ?><span><?php _l('pages.show.subpages.edit') ?></span>
       </a>
+      <?php endif ?>
       <?php if($addbutton): ?>
       <a title="+" data-shortcut="+" href="<?php _u($page, 'add') ?>">
         <?php i('plus-circle', 'left') ?><span><?php _l('pages.show.subpages.add') ?></span>

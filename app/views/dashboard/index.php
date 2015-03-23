@@ -12,9 +12,13 @@
         </span>
         <span class="hgroup-options shiv shiv-dark shiv-left">
           <span class="hgroup-option-right">
+
+            <?php if (c::get('pageOrdering') || is_null(c::get('pageOrdering'))): ?>
             <a title="<?php _l('dashboard.index.pages.edit') ?>" href="#/subpages/index/">
               <?php i('pencil', 'left') ?><span><?php _l('dashboard.index.pages.edit') ?></span>
             </a>
+            <?php endif ?>
+
             <a title="+" data-shortcut="+" href="#/pages/add/">
               <?php i('plus-circle', 'left') ?><span><?php _l('dashboard.index.pages.add') ?></span>
             </a>
