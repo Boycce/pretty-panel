@@ -16,7 +16,7 @@
     ?>
     <li>
       <a title="<?php __($item->title()) ?>" class="breadcrumb-link" href="<?php echo purl($item, 'show') ?>">
-        <span class="breadcrumb-label"><?php __($item->uid()) ?></span>
+        <span class="breadcrumb-label"><?php __($item->title()) ?></span>
       </a>
     </li>
     <?php }} ?>
@@ -28,7 +28,7 @@
     ?>
     <li>
       <a title="<?php __($page->title()) ?>" class="breadcrumb-link" href="<?php echo purl($page, 'show') ?>">
-        <span class="breadcrumb-label"><?php __((isset($match))? $page->title() : $page->uid()) ?></span>
+        <span class="breadcrumb-label"><?php __((isset($match))? $page->title() : $page->title()) // latter was uid() ?></span>
       </a>
     </li>
     <?php } ?>

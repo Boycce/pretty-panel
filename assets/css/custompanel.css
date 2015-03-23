@@ -219,5 +219,12 @@ a.label-option {
   .field-grid-item-3-4 {
     width: 70%;
   }
-}
 
+  .mainbar {
+    max-width: 1050px;
+  }
+  .dashboard {
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+}
