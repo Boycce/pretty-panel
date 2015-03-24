@@ -183,16 +183,30 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 /* ---- Page Editor ------------------------------ */
 
+@media screen and (min-width: 50em) {
+  .modal-content {
+    width: 26em;
+  }
+}
+
+
+/* ---- Page Editor ------------------------------ */
+
 hr {
   background: #E0E2E8;
 }
 
+.field-with-buttons .input {
+  min-height: 7em;
+}
 
 textarea.nowrap {
   white-space: nowrap;
   overflow-x: auto! important;
 }
-
+.field-content > .text {
+  margin-bottom: -1.0em;
+}
 
 /* Structure */
 .structureskinny-empty,
@@ -210,7 +224,7 @@ a.label-option {
   }
   .field-with-line {
     clear: both;
-    margin: 1.5em 0 3.5em;
+    margin: 1.5em 0 2.5em;
   }
   
   .field-grid-item-1-4 {
@@ -221,10 +235,13 @@ a.label-option {
   }
 
   .mainbar {
-    max-width: 1050px;
+    max-width: 1000px;
   }
   .dashboard {
     max-width: 1550px;
     margin: 0 auto;
+  }
+  .dashboard .dashboard-section {
+    margin-bottom: 11.5em;
   }
 }
