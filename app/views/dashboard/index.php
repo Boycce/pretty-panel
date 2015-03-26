@@ -13,7 +13,13 @@
         <span class="hgroup-options shiv shiv-dark shiv-left">
           <span class="hgroup-option-right">
 
-            <?php if (c::get('pageOrdering') || is_null(c::get('pageOrdering'))): ?>
+            <?php 
+              if (is_array(c::get('pageOrdering')))
+                foreach (c::get('pageOrdering') as $title)
+                  if ($title == 'Dashboard') $show = true;
+
+              if (c::get('pageOrdering') === true || is_null(c::get('pageOrdering')) || isset($show)): 
+            ?>
             <a title="<?php _l('dashboard.index.pages.edit') ?>" href="#/subpages/index/">
               <?php i('pencil', 'left') ?><span><?php _l('dashboard.index.pages.edit') ?></span>
             </a>

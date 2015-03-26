@@ -5,7 +5,12 @@
   <span class="hgroup-options shiv shiv-dark shiv-left">
     <span class="hgroup-option-right">
     
-      <?php if (c::get('pageOrdering') || is_null(c::get('pageOrdering'))): ?>
+      <?php 
+        if (is_array(c::get('pageOrdering')))
+          foreach (c::get('pageOrdering') as $title)
+            if ($title == $page->title()) $show = true;
+        if (c::get('pageOrdering') === true || is_null(c::get('pageOrdering')) || isset($show)): 
+      ?>
       <a title="<?php _l('pages.show.subpages.edit') ?>" href="<?php _u('subpages/index/' . $page->id()) ?>">
         <?php i('pencil', 'left') ?><span><?php _l('pages.show.subpages.edit') ?></span>
       </a>
