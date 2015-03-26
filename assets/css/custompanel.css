@@ -245,3 +245,70 @@ a.label-option {
     margin-bottom: 11.5em;
   }
 }
+
+
+
+
+
+
+.structureone {
+  padding-bottom: 0.5em;
+}
+.structureone-entries {
+  border: 2px dotted #C7CBE5;
+  /* border-style: solid; */
+  /* padding: 0.25em; */
+}
+.structureone-entry {
+  background: #FFF;
+  position: relative;
+}
+.structureone-entry.ui-sortable-placeholder {
+  /*margin-bottom: 0px;*/
+}
+.structureone-entry.ui-sortable-helper > * {
+  border-bottom-color: #fff;
+}
+.structureone-entry:last-child {
+}
+.structureone-entry-content {
+  padding: 9px 1.5em;
+  cursor: pointer;
+  overflow: hidden;
+  height: 43px;
+  line-height: 26px;
+}
+.structureone-entry-options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid #efefef;
+}
+.structureone-entry-options ul {
+  
+}
+.structureone-entry-options li {
+    display: block;
+  
+    float: left;
+}
+.structureone-entry-options .btn {
+  padding: 13px 1.5em;
+  width: 100%;
+  margin-bottom: -1px;
+}
+.structureone-empty {
+  padding: 1.5em;
+  background: #ddd;
+}
+.structureone-empty a {
+  border-bottom: 2px solid #aaa;
+  margin-left: .5em;
+}
+.structureone-empty a:hover {
+  border-color: #000;
+}
+
+.structureone .btn-with-icon .icon {
+  /*color: #A5ACC5;*/
+}
