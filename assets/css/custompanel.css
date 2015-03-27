@@ -198,6 +198,7 @@ hr {
 
 .field-with-buttons .input {
   min-height: 7em;
+  max-height: 300px !important;
 }
 
 textarea.nowrap {
@@ -283,6 +284,7 @@ a.label-option {
   top: 0;
   right: 0;
   border-left: 1px solid #efefef;
+  background: #fff;
 }
 .structureone-entry-options ul {
   
