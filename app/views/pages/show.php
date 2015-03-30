@@ -31,8 +31,10 @@
           <?php foreach($form->fields() as $field) echo $field ?>
         </fieldset>
 
-        <div class="buttons buttons-centered cf">
-          <input title="meta+enter" class="btn btn-rounded btn-submit" type="submit" data-saved="<?php echo l('saved') ?>" value="<?php echo l('save') ?>">
+        <div class="buttons buttons-centered fixedsave cf">
+          <div>
+            <input title="meta+enter" class="btn btn-rounded btn-submit" type="submit" data-saved="<?php echo l('saved') ?>" value="<?php echo l('save') ?>">
+          </div>
         </div>
         <?php endif ?>
 
