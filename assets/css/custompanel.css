@@ -1,4 +1,7 @@
 
+small {
+  font-size: 100%;
+}
 
 /* ---- Dashboard ------------------------------ */
 
@@ -75,6 +78,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .btn {
   color: #525A79;
+  font-size: 100%;;
 }
 
 .btn-rounded {
@@ -250,18 +254,57 @@ a.label-option {
 
 /* ---- Medium Editor --------------------- */
 
-.medium-editor-input {
-    display: none;
-}
 .medium-editor.over,
 textarea.over {
   border-color: #000;
 }
+.medium-editor-input {
+  /* display: none; */
+  min-height: 300px;
+}
+.medium-editor {
+  min-height: 69px;
+}
 
+.medium-editor p {
+  margin-bottom: 1.6em;
+  font-size: 15.2px;
+}
+.medium-editor h1, 
+.medium-editor h2 {
+  margin-bottom: 0.7em;
+  font-weight: 400;
+  color: #000066;
+  font-size: 24px;
+  line-height: 1.5em;
+}
 
-
-
-
+.medium-editor h3 {
+  margin-bottom: 0.7em;
+  font-weight: 400;
+  color: #000066;
+  font-size: 19px;
+  line-height: 1.5em;
+}
+.medium-editor a {
+  color: #ff6600;
+}
+.medium-editor a:hover {
+  color: #000066;
+}
+.medium-editor b,
+.medium-editor strong {
+  font-weight: 600;
+  color: #3C4556;
+}
+.medium-editor ul, 
+.medium-editor ol {
+  margin-left: 2em;
+  margin-bottom: 1.8em;
+}
+.medium-editor li {
+  margin-bottom: 0.6em;
+}
 
 
 @media screen and (min-width: 60em) {
