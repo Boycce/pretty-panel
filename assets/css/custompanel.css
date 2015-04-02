@@ -1,4 +1,5 @@
-
+.autocomplete button,
+input,
 small {
   font-size: 100%;
 }
@@ -55,6 +56,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .input {
   border: 2px solid #D8DAE7;
   color: #616686;
+  font-size: 100%;
 }
 .modal-content textarea {
   max-height: 230px;
@@ -259,11 +261,13 @@ textarea.over {
   border-color: #000;
 }
 .medium-editor-input {
-  /* display: none; */
+  display: none;
   min-height: 300px;
 }
 .medium-editor {
   min-height: 69px;
+  resize: none;
+  overflow: hidden;
 }
 
 .medium-editor p {
@@ -305,6 +309,17 @@ textarea.over {
 .medium-editor li {
   margin-bottom: 0.6em;
 }
+
+
+div.medium-editor-placeholder:after {
+  color: #AAACB6;
+  top: 7px;
+  left: 9px;
+  font-style: normal;
+  white-space: pre;
+}
+
+
 
 
 @media screen and (min-width: 60em) {
