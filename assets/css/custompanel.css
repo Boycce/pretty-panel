@@ -3,7 +3,7 @@
 /* ---- Dashboard ------------------------------ */
 
 .dashboard-section a.tag:first-child {
-  display:none;
+  /* display:none; */
 }
 .input-is-readonly,
 .dashboard-box {
@@ -187,7 +187,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 @media screen and (min-width: 50em) {
   .modal-content {
     width: 30em;
-  }
+  
+    overflow: visible;
+}
 }
 
 
@@ -244,6 +246,23 @@ textarea.nowrap {
 a.label-option {
   cursor:pointer;
 }
+
+
+/* ---- Medium Editor --------------------- */
+
+.medium-editor-input {
+    display: none;
+}
+.medium-editor.over,
+textarea.over {
+  border-color: #000;
+}
+
+
+
+
+
+
 
 @media screen and (min-width: 60em) {
   .field-with-line {
@@ -312,7 +331,7 @@ a.label-option {
   cursor: pointer;
   overflow: hidden;
   height: 40px;
-  line-height: 26px;
+  line-height: 25px;
 }
 .structureone-entry-options {
   position: absolute;
