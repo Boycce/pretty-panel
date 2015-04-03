@@ -261,7 +261,7 @@ textarea.over {
   border-color: #000;
 }
 .medium-editor-input {
-  display: none;
+  /* display: none; */
   min-height: 300px;
 }
 .medium-editor {
@@ -270,9 +270,12 @@ textarea.over {
   overflow: hidden;
 }
 
+.medium-editor div,
+.medium-editor p {
+  font-size: 15.2px;
+}
 .medium-editor p {
   margin-bottom: 1.6em;
-  font-size: 15.2px;
 }
 .medium-editor h1, 
 .medium-editor h2 {

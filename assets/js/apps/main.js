@@ -62,7 +62,7 @@ app.modal.hide();
 
 // a click on the modal background will close the modal
 app.modal.on('click', function() {
-  app.modal.trigger('view:close');
+  //app.modal.trigger('view:close');
 });
 
 // a custom method to handle modal alerts
