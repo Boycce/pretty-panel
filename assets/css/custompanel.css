@@ -261,7 +261,7 @@ textarea.over {
   border-color: #000;
 }
 .medium-editor-input {
-  /* display: none; */
+  display: none;
   min-height: 300px;
 }
 .medium-editor {
