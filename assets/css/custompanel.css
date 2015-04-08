@@ -70,6 +70,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   max-height: 230px;
   overflow: auto !important;
 }
+.modal-content textarea[name=prices] {    
+    word-wrap: normal !important;
+    white-space: pre;
+}
 .modal-content .text {
   margin-bottom:-1.0em
 }
@@ -200,7 +204,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 @media screen and (min-width: 50em) {
   .modal-content {
-    width: 30em;
+    width: 32em;
   
     overflow: visible;
 }
