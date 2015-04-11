@@ -289,6 +289,14 @@ textarea.over {
 .medium-editor p {
   margin-bottom: 1.6em;
 }
+.medium-editor h1, 
+.medium-editor h2 {
+  margin-bottom: 0.7em;
+  font-weight: 400;
+  color: #000066;
+  font-size: 24px;
+  line-height: 1.5em;
+}
 .modal-content .medium-editor h1, 
 .modal-content .medium-editor h2 {
   margin-bottom: 0.5em;
