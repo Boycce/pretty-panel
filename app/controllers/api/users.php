@@ -21,6 +21,9 @@ class UsersController extends Controller {
     $form = $this->form();
     $data = $form->toArray();
 
+    // Hidden capital fix for username.
+    $data['username'] = str::slug($data['username'], '-', '0-9a-z-');
+
     if($data['password'] !== $data['passwordconfirmation']) {
       return response::error(l('users.form.error.password.confirm'));
     }
