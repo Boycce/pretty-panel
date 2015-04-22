@@ -33,6 +33,12 @@
       </h2>
 
       <ul class="nav nav-list sidebar-list">
+      <?php if (c::get('pageOrdering') === true || is_null(c::get('pageOrdering')) || isset($show)): ?>
+        <?php foreach($site->children() as $c): ?>
+        <?php echo new Snippet('pages/sidebar/subpage', array('subpage' => $c)) ?>
+        <?php endforeach ?>
+
+      <?php else: ?>
         <?php foreach($site->children()->visible()->sortBy('title', 'asc') as $c): ?>
         <?php echo new Snippet('pages/sidebar/subpage', array('subpage' => $c)) ?>
         <?php endforeach ?>
@@ -40,6 +46,7 @@
         <?php foreach($site->children()->invisible()->sortBy('title', 'asc') as $c): ?>
         <?php echo new Snippet('pages/sidebar/subpage', array('subpage' => $c)) ?>
         <?php endforeach ?>
+      <?php endif ?>
       </ul>
 
     </div>
